@@ -1,8 +1,8 @@
-import { RootState } from "../../reducers/store";
-import { useGetUsersQuery } from "../../reducers/reducer";
-import { setParam } from "../../reducers/action-creation";
+import { RootState } from "../../../reducers/store";
+import { useGetUsersQuery } from "../../../reducers/reducer";
+import { setParam } from "../../../reducers/action-creation";
 
-import { baseQueryResponse, ItemsResponse } from "../../types/types";
+import { baseQueryResponse, ItemsResponse } from "../../../types/types";
 
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +17,7 @@ import {
   DivMainOrder,
   DivMainOrderButtons,
   DivPageButtons,
-} from "../styles/userItem-styles";
+} from "../../styles/userItem-styles";
 
 function UsersItem({ valueInput }: { valueInput: string }): JSX.Element {
   const dispatch = useDispatch();

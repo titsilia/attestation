@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
-import { useGetUserQuery } from "../../reducers/reducer";
-import { baseQueryResponse, ItemsResponse } from "../../types/types";
+import { useGetUserQuery } from "../../../reducers/reducer";
+import { baseQueryResponse, ItemsResponse } from "../../../types/types";
 
 import {
   UsersText,
@@ -11,7 +11,7 @@ import {
   UserLink,
   UsersTitleText,
   ErrorText,
-} from "../styles/userItem-styles";
+} from "../../styles/userItem-styles";
 
 function UserPage(): JSX.Element {
   const { login } = useParams();

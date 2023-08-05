@@ -78,6 +78,7 @@ export const DivPageButtons = styled.div`
   gap: 22px;
 `;
 
+// стили для страницы user
 export const DivMainItemsUser = styled.div`
   display: flex;
   flex-direction: column;
@@ -100,4 +101,11 @@ export const UserLink = styled.a`
 export const ErrorText = styled.p`
   font-size: 24px;
   color: #000000;
+`;
+
+// стили для страницы NotFound
+export const NotFoundText = styled.p`
+  font-size: 30px;
+  color: #ffffff;
+  margin-top: 45vh;
 `;

@@ -7,7 +7,7 @@ import {
   DivMainControls,
   Input,
   Buttons,
-} from "../styles/userItem-styles";
+} from "../../styles/userItem-styles";
 
 function Main(): JSX.Element {
   const [valueInput, setValueInput] = useState("");
