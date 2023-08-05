@@ -5,12 +5,14 @@ export const sortSlice = createSlice({
   initialState: {
     orderSort: {
       param: "desc",
+      page: 1,
     },
   },
   reducers: {
     setParam: (state, action) => {
       state.orderSort = {
         param: action.payload,
+        page: action.payload,
       };
     },
   },

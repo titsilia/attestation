@@ -8,14 +8,22 @@ export const searchApi = createApi({
     baseUrl: FETCH_SEARCH,
   }),
   endpoints: (builder) => ({
-    getUsers: builder.query<any, { login: string; params: string }>({
+    getUsers: builder.query<
+      any,
+      { login: string; params: string; page: number }
+    >({
       query: (args) => {
-        const { login, params } = args;
+        const { login, params, page } = args;
         return {
-          url: `/users?q=${login}&sort=repositories&order=${params}`,
+          url: `/users?q=${login}&sort=repositories&order=${params}&per_page=15&page=${page}`,
         };
+      },
+    }),
+    getUser: builder.query<unknown, string>({
+      query: (name) => {
+        return { url: `/users?q=${name}` };
       },
     }),
   }),
 });
-export const { useGetUsersQuery } = searchApi;
+export const { useGetUsersQuery, useGetUserQuery } = searchApi;

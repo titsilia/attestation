@@ -2,7 +2,12 @@ import React from "react";
 import { useState, useRef } from "react";
 import UsersItem from "./usersItem";
 
-import "../../App.css";
+import {
+  DivMain,
+  DivMainControls,
+  Input,
+  Buttons,
+} from "../styles/userItem-styles";
 
 function Main(): JSX.Element {
   const [valueInput, setValueInput] = useState("");
@@ -16,13 +21,13 @@ function Main(): JSX.Element {
   }
 
   return (
-    <div className="main">
-      <div className="main__controls">
-        <input type="text" ref={searchInput} />
-        <button onClick={searchUsers}>Найти пользователя</button>
-      </div>
+    <DivMain>
+      <DivMainControls>
+        <Input type="text" ref={searchInput} />
+        <Buttons onClick={searchUsers}>Найти пользователя</Buttons>
+      </DivMainControls>
       {valueInput === "" ? <></> : <UsersItem valueInput={valueInput} />}
-    </div>
+    </DivMain>
   );
 }
 

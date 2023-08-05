@@ -1,10 +1,10 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { searchApi } from "./reducer";
-import { setParam } from "./action-creation";
+import { sortSlice } from "./action-creation";
 
 const rootReducer = combineReducers({
   [searchApi.reducerPath]: searchApi.reducer,
-  setParam,
+  [sortSlice.name]: sortSlice.reducer,
 });
 
 export const store = configureStore({
