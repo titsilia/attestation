@@ -10,6 +10,7 @@ import {
   Image,
   UserLink,
   UsersTitleText,
+  ErrorText,
 } from "../styles/userItem-styles";
 
 function UserPage(): JSX.Element {
@@ -24,11 +25,11 @@ function UserPage(): JSX.Element {
   const { data, isLoading } = useGetUserQuery<baseQueryResponse>(name);
 
   if (isLoading) {
-    return <UsersText>Загружается...</UsersText>;
+    return <ErrorText>Загружается...</ErrorText>;
   }
 
-  if (data === undefined) {
-    return <UsersText>Данные не были получены, попробуйте заново</UsersText>;
+  if (!isLoading && data === undefined) {
+    return <ErrorText>Данные не были получены, попробуйте заново</ErrorText>;
   }
   let user = data.items[0];
 

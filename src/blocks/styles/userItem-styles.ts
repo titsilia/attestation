@@ -96,3 +96,8 @@ export const UserLink = styled.a`
   color: #ffffff;
   text-decoration: none;
 `;
+
+export const ErrorText = styled.p`
+  font-size: 24px;
+  color: #000000;
+`;
